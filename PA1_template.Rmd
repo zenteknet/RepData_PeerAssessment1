@@ -8,7 +8,26 @@ output:
 
 ## Loading and preprocessing the data
 
+### Load Libraries  (install these packages if not currently installed)
+```{r}
+library(dplyr)
+library(tidyr)
+library(reshape2)
+library(ggplot2)
 
+```
+### Set default settings for R markdown
+```{r}
+echo = True  # Display code along with results
+options(digits=2)  # Set output values to 2 decimal places
+```
+
+### Unzip data and read in data
+```{r}
+unzip("activity.zip") 
+data = read.csv("activity.csv", stringsAsFactors=FALSE)
+data = tbl_df(data)  # Convert to Table class for use with dplyr and tidyr
+```
 
 ## What is mean total number of steps taken per day?
 
