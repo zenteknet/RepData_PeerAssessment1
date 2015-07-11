@@ -14,7 +14,7 @@ library(dplyr)
 library(tidyr)
 library(reshape2)
 library(ggplot2)
-
+library(markdown)
 ```
 ### Set default settings for R markdown
 ```{r}
